@@ -25,7 +25,7 @@ def htmx_login(request):
         else:
             user = authenticate(request, username=username, password=password)
             if user is not None:
-                login(request, user)
+                login(request)
                 status = "Login successful"
             else:
                 status = "Invalid username or password"
